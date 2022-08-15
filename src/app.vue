@@ -2,25 +2,25 @@
 import { InitApp } from '~/utils/initApp'
 InitApp()
 const locale = useState<string>('locale.i18n')
+import AppHeader from './components/AppHeader.vue'
 </script>
 
 <template>
   <Html :lang="locale">
-    <Body
-      class="bg-white text-gray-800 antialiased transition-colors duration-300 dark:bg-gray-900 dark:text-gray-200"
-    >
-      <NuxtLayout>
-        <NuxtPage />
-      </NuxtLayout>
-    </Body>
+
+  <Body class="bg-bgcolor text-gray-800 antialiased transition-colors duration-300 ">
+
+    <AppHeader />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </Body>
+
   </Html>
 </template>
 
 <style lang="postcss">
 body {
-  @apply bg-gray-50 dark:bg-gray-800;
-}
-.global-text {
-  @apply text-gray-900 dark:text-gray-50;
+  @apply bg-bgcolor;
 }
 </style>
